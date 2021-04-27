@@ -17,7 +17,7 @@ if input_state == "Maharashtra" or "Kerala" or "UP" or "Delhi" or "Punjab":
     input_case = input("Which cases do you want to see???")
     if input_case == "All":
         print("covid-19 cases in", input_state, " are", states[input_state])
-    elif input_case == "All" or "Confirmed" or "Active" or "Recovered":
+    elif input_case == "Confirmed" or "Active" or "Recovered":
         enter_state = states[input_state][input_case]
         print()
         print("covid-19", input_case, "cases in", input_state, " are", enter_state)
