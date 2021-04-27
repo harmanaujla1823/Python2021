@@ -12,17 +12,16 @@ states = {
 # print(states)
 
 input_state = input("Enter the name of state:")
-if input_state != "Maharashtra" or "Kerala" or "UP" or "Delhi" or "Punjab":
-    print("You've entered wrong input!!!")
-else:
+if input_state == "Maharashtra" or "Kerala" or "UP" or "Delhi" or "Punjab":
     print("All, Confirmed, Active or Recovered ")
     input_case = input("Which cases do you want to see???")
-
     if input_case == "All":
         print("covid-19 cases in", input_state, " are", states[input_state])
-    elif input_case != "All" or "Confirmed" or "Active" or "Recovered":
-        print("You've entered wrong input!!!")
-    else:
+    elif input_case == "All" or "Confirmed" or "Active" or "Recovered":
         enter_state = states[input_state][input_case]
         print()
         print("covid-19", input_case, "cases in", input_state, " are", enter_state)
+    else:
+        print("You've entered wrong input!!!")
+else:
+    print("You've entered wrong input!!!")
